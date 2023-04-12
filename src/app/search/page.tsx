@@ -1,3 +1,9 @@
+import UserSearch from '@/components/UserSearch';
+
 export default function SearchPage() {
-  return <div>서치</div>;
+  return (
+    <>
+      <UserSearch />
+    </>
+  );
 }
