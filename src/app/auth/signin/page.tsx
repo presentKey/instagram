@@ -1,8 +1,14 @@
 import Signin from '@/components/Signin';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
+import { Metadata } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { getProviders } from 'next-auth/react';
 import { redirect } from 'next/navigation';
+
+export const metadata: Metadata = {
+  title: 'Signin',
+  description: 'Signup or Login to Instantgram',
+};
 
 type Props = {
   searchParams: {
@@ -10,9 +16,7 @@ type Props = {
   };
 };
 
-export default async function SignPage({
-  searchParams: { callbackUrl },
-}: Props) {
+export default async function SignPage({ searchParams: { callbackUrl } }: Props) {
   const session = await getServerSession(authOptions);
 
   if (session) {
