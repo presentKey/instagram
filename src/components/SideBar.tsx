@@ -1,8 +1,8 @@
-import { User } from '@/model/user';
+import { AuthUser } from '@/model/user';
 import Avatar from './Avatar';
 
 type Props = {
-  user: User;
+  user: AuthUser;
 };
 
 export default function SideBar({ user: { name, username, image } }: Props) {
@@ -16,12 +16,9 @@ export default function SideBar({ user: { name, username, image } }: Props) {
         </div>
       </div>
       <p className='text-sm text-neutral-500 mt-8'>
-        About · Help · Press · API · Jobs · Privacy · Terms · Location ·
-        Language
+        About · Help · Press · API · Jobs · Privacy · Terms · Location · Language
       </p>
-      <p className='font-bold text-sm mt-8 text-neutral-500'>
-        @Copyright INSTANTGRAM from METAL
-      </p>
+      <p className='font-bold text-sm mt-8 text-neutral-500'>@Copyright INSTANTGRAM from METAL</p>
     </>
   );
 }
