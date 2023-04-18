@@ -5,7 +5,7 @@ export type Comment = {
 };
 
 export type SimplePost = Omit<FullPost, 'comments'> & {
-  comment: number;
+  comments: number;
 };
 
 export type FullPost = {
